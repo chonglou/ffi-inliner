@@ -1,8 +1,35 @@
 ffi-inliner
 ---------
-  by Andrea Fazzi
 
-  http://github.com/remogatto/ffi-inliner
+## Why fork
+A lots of warning:
+
+    $HOME/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/ffi-inliner-0.2.4/lib/ffi-inliner/inliner.rb:3:in `<module:Inliner>': Use RbConfig instead of obsolete and deprecated Config.
+    $HOME/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/ffi-inliner-0.2.4/lib/ffi-inliner/inliner.rb:3:in `<module:Inliner>': Use RbConfig instead of obsolete and deprecated Config.
+    $HOME/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/ffi-inliner-0.2.4/lib/ffi-inliner/inliner.rb:9:in `<module:Inliner>': Use RbConfig instead of obsolete and deprecated Config.
+    $HOME/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/ffi-inliner-0.2.4/lib/ffi-inliner/inliner.rb:11:in `<module:Inliner>': Use RbConfig instead of obsolete and deprecated Config.
+    $HOME/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/ffi-inliner-0.2.4/lib/ffi-inliner/inliner.rb:89:in `ldshared': Use RbConfig instead of obsolete and deprecated Config.
+
+When I clone and run 'rake gem:build' follow by README.rdoc
+
+    NoMethodError: undefined method `source_index' for Gem:Module
+    tasks/setup.rb:204:in `depend_on'
+
+After fix it, also:
+
+    NoMethodError: undefined method `source_index' for Gem:Module
+    tasks/setup.rb:204:in `depend_on'
+
+I check tag list:
+
+    $ git tag -l
+    0.2.1
+    0.2.3
+    0_2_0
+
+There is no 0.2.4, OH MY GOD!!!
+
+All source code designed by Andrea Fazzi  [http://github.com/remogatto/ffi-inliner], I just package it using gemspec.
 
 ## DESCRIPTION:
 
@@ -57,6 +84,7 @@ or from github:
 
 Special thanks to:
 
+* Andrea Fazzi  [http://github.com/remogatto/ffi-inliner]
 * Ryan Davis for his inspiring
   RubyInline[http://www.zenspider.com/ZSS/Products/RubyInline/].
 
