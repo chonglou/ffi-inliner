@@ -49,7 +49,7 @@ add to Gemfile:
 
 or from github:
 
-    git clone git://github.com/chonglou/ffi-inliner
+    git clone git://github.com/chonglou/ffi-inliner.git
     cd ffi-inliner
     [sudo] rake install
 
